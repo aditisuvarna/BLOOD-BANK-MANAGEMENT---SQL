@@ -17,10 +17,10 @@ To facilitate efficient matching of blood groups between donors and patients dur
 
 To enable easy retrieval of insights through SQL queries for operational and strategic decision-making.
 
-#Problem Statement
+# Problem Statement
 Blood banks often face challenges such as inventory shortages, expired blood units, donor eligibility management, and inefficient communication with hospitals. Manual systems or fragmented databases can result in delays, errors, and loss of precious resources. Hence, there is a need for a centralized and systematic database solution that manages end-to-end operations including donor registration, blood collection, testing for safety, tracking available inventory, responding to hospital requests, and issuing blood units to patients.
 
-#Data Overview
+# Data Overview
 Donors: Donor details and eligibility tracking.
 
 Patients: Patient details and blood request requirements.
@@ -41,31 +41,19 @@ Transactions: Blood issuance to patients.
 
 Donation_Camp: Organization of blood donation camps.
 
-#ER DIAGRAM
+# ER DIAGRAM
 "Our database design mainly follows one-to-many relationships,  for example, one donor giving multiple donations, one hospital making multiple requests, and one staff managing multiple activities."
 
 # QUERIES & ANALYSIS
 
 # 1. Find the total number of patients registered
 
-# SELECT COUNT(*) AS total_patients  
-FROM Patients;
-
-I counted the total number of patients from the Patients table.
-
-This helps understand the overall scale of healthcare services.
-
-Essential for planning staffing and facilities.
+## SELECT COUNT(*) AS total_patients  
+## FROM Patients;
 
 # Result: total_patients = 25
 
-
 # 2. Find all eligible donors
-I filtered the Donors table to find all eligible donors.
 
-This is important for organizing upcoming blood donation drives.
 
-Helps ensure enough volunteers are available.
-
-Example result (partial)
 # SELECT * FROM Donors WHERE is_eligible = TRUE;
